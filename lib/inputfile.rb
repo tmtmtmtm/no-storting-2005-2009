@@ -45,6 +45,7 @@ class InputFile
     P1366: %w[replaced_by replacedby replacedBy],
     P1534: %w[cause end_cause endcause endCause],
     P1545: %w[ordinal],
+    P2715: %w[election electedin electedIn],
     P5054: %w[cabinet]
   }.freeze
 
