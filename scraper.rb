@@ -23,6 +23,10 @@ class MembershipRow < WikipediaMembershipRow
   def columns
     %w[_seat name party constituency _notes]
   end
+
+  field :election do
+    'Q1475163'
+  end
 end
 
 url = ARGV.first || abort("Usage: #{$0} <url to scrape>")
