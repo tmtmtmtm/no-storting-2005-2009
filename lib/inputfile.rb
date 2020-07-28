@@ -38,7 +38,7 @@ class InputFile
   MAPPING = {
     id: %w[item],
     P4100: %w[party group],
-    P768: %w[area constituency],
+    P768: %w[area constituency district],
     P580: %w[start starttime startdate start_time start_date],
     P582: %w[end endtime enddate end_time end_date],
     P1365: %w[replaces],
