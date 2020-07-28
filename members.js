@@ -1,11 +1,11 @@
 // List of P39 data for this term. Fetch with:
-//     wd sparql members.js <term-qid> | tee wikidata.json
+//     wd sparql members.js <membership-qid> <term-qid> | tee wikidata.json
 
-module.exports = term => `
+module.exports = (membership, term) => `
   SELECT ?statement ?item ?itemLabel ?party ?partyLabel ?district ?districtLabel
           ?election ?electionLabel ?start ?startPrecision ?end ?endPrecision ?cabinet WHERE {
     ?item wdt:P31 wd:Q5; p:P39 ?statement.
-    ?statement ps:P39 wd:Q9045502 ; pq:P2937 wd:${term} .
+    ?statement ps:P39 wd:${membership} ; pq:P2937 wd:${term} .
     MINUS { ?statement wikibase:rank wikibase:DeprecatedRank. }
 
     OPTIONAL { ?statement pqv:P580 [ wikibase:timeValue ?start; wikibase:timePrecision ?startPrecision ] }
