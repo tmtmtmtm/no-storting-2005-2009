@@ -55,7 +55,7 @@ class WikipediaMembershipRow < WikipediaTableRow
   end
 
   def constituency_cell
-    cell_for('party')
+    cell_for('constituency')
   end
 
   def start_date_cell
